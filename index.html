@@ -11,12 +11,30 @@
   </head>
   <body>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+   <html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1096701572320-6ofacphc09e4n6ubl2a2evabgjip9nfr.apps.googleusercontent.com">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    function onSignIn(googleUser) {
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
-         console.log('Name: ' + profile.getName());
-          }
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+       
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+  </body>
+</html>
     
     <section class="page-header">
       <h1 class="project-name">B00447143.GitHub.io</h1>
