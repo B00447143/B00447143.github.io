@@ -8,6 +8,16 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="https://www.google.com/cloudprint/client/cpgadget.js">
+</script>
+<script>
+  window.onload = function() {
+    var gadget = new cloudprint.Gadget();
+    gadget.setPrintButton(
+        cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
+    gadget.setPrintDocument("[document mimetype]", "[document title]", "[document content]", "[encoding] (optional)");
+  }
+</script>
   </head>
   <body>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -49,6 +59,7 @@
       <h1 class="project-name">B00447143.GitHub.io</h1>
       <h2 class="project-tagline"></h2>
     </section>
+<div id="print_button_container"></div>
 
     <section class="main-content">
       <h3>
