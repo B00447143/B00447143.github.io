@@ -15,13 +15,14 @@
    <meta name="google-signin-client_id" content="1096701572320-6ofacphc09e4n6ubl2a2evabgjip9nfr.apps.googleusercontent.com">
   <head>
 <script>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
   window.onload = function() {
     var gadget = new cloudprint.Gadget();
     gadget.setPrintButton(
         cloudprint.Gadget.createDefaultPrintButton("print_button_container")); // div id to contain the button
     gadget.setPrintDocument("[document mimetype]", "[document title]", "[document content]", "[encoding] (optional)");
   }
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  
 
 </script>
   </head>
